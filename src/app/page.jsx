@@ -146,7 +146,7 @@ export default function Homepage() {
 
       {/* Experience */}
       <section id="experience" className="px-6 py-24 lg:px-36 relative z-30">
-        <h2 data-aos="fade-up" className="font-preahvihear font-normal text-4xl text-center mb-6">
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
           Experience
         </h2>
         <div className="flex flex-wrap gap-4 justify-center">
