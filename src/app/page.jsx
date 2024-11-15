@@ -94,7 +94,7 @@ export default function Homepage() {
 
       {/* About Me */}
       <section id="about" className="px-6 py-24 lg:px-36 relative">
-        <h2 data-aos="fade-up" className="font-preahvihear font-normal text-4xl text-center mb-6">
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
           About Me
         </h2>
         <div data-aos="fade-up" className="relative bg-custom-radial p-6 rounded-xl overflow-hidden">
