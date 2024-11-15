@@ -27,7 +27,7 @@ export default function Experience({ image, title, jobTitle, date, description }
           <p className="text-white font-light text-sm">{date}</p>
         </div>
       </div>
-      <p>{description} </p>
+      <p className="text-grey font-medium text-base">{description}</p>
     </div>
   );
 }
