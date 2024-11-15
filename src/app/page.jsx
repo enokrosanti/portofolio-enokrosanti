@@ -198,7 +198,7 @@ export default function Homepage() {
 
       {/* Certificates */}
       <section id="certificates" className="px-6 py-24 lg:px-36 relative">
-        <h2 data-aos="fade-up" className="font-preahvihear font-normal text-4xl text-center mb-6">
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
           Certificates
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
