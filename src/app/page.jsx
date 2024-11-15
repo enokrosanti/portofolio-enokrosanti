@@ -173,7 +173,7 @@ export default function Homepage() {
 
       {/* Projects */}
       <section id="projects" className="px-6 py-24 lg:px-36 relative">
-        <h2 data-aos="fade-up" className="font-preahvihear font-normal text-4xl text-center mb-6">
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
           Projects
         </h2>
         <div className="flex flex-col gap-6">
