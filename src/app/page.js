@@ -5,6 +5,7 @@ import Image from "next/image";
 import Tag from "./components/Tag/tag";
 import Experience from "./components/Experience/experience";
 import Project from "./components/Project/project";
+import Certificate from "./components/Certificate/certificate";
 
 export default function HomePage() {
   return (
@@ -67,9 +68,7 @@ export default function HomePage() {
 
       {/* Experience */}
       <section id="experience" className="px-6 py-24 lg:px-36 relative z-30">
-        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
-          Experience
-        </h2>
+        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">Experience</h2>
         <div className="flex flex-wrap gap-4 justify-center">
           <Experience
             image={"/assets/images/experience/sawala-tech.png"}
@@ -94,9 +93,7 @@ export default function HomePage() {
 
       {/* Projects */}
       <section id="projects" className="px-6 py-24 lg:px-36 relative">
-        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
-          Projects
-        </h2>
+        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">Projects</h2>
         <div className="flex flex-col gap-6">
           <Project
             projectName={"Zenlytics - Personal Task"}
@@ -114,6 +111,37 @@ export default function HomePage() {
             }
             link={"https://sawala-blog.vercel.app"}
           />
+        </div>
+      </section>
+
+      {/* Certificates */}
+      <section id="certificates" className="px-6 py-24 lg:px-36 relative">
+        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">Certificates</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Certificate image={"/assets/images/certificates/nodejsmongodb-gamelab.png"} title={"NodeJS dan MongoDB"} issuer={"Gamelab Indonesia"} date={"September 2024"} link={"https://www.gamelab.id/certificate/GL3347427148"} />
+          <Certificate
+            image={"/assets/images/certificates/fe-fundamentals-myskill.png"}
+            title={"Frontend Fundamentals"}
+            issuer={"MySkill x SGU"}
+            date={"August 2024"}
+            link={"https://drive.google.com/file/d/1MwqJfiCHlP4MAmPyqz9pdtM3PN2Dcys3/view"}
+          />
+          <Certificate
+            image={"/assets/images/certificates/uiux-design-fundamentals-myskill.png"}
+            title={"UI/UX Design Fundamentals"}
+            issuer={"MySkill x SGU"}
+            date={"July 2024"}
+            link={"https://drive.google.com/file/d/1TaMMxu_Po7ZIs_hXHy9UbjeCvzurJisn/view"}
+          />
+          <Certificate image={"/assets/images/certificates/nodejsmysql-gamelab.png"} title={"NodeJS dan MySQL"} issuer={"Gamelab Indonesia"} date={"June 2024"} link={"https://www.gamelab.id/certificate/GL8614824871"} />
+          <Certificate
+            image={"/assets/images/certificates/introtose-revou.png"}
+            title={"Intro to Software Engineering"}
+            issuer={"RevoU"}
+            date={"May 2024"}
+            link={"https://certificates.revou.co/enok-rosanti-certificate-attendance-sefc.pdf"}
+          />
+          <Certificate image={"/assets/images/certificates/htmlcssjs-gamelab.png"} title={"HTML, CSS, dan JavaScript"} issuer={"Gamelab Indonesia"} date={"January 2024"} link={"https://www.gamelab.id/certificate/GL5572132962"} />
         </div>
       </section>
     </>
