@@ -1,14 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Tag from "./components/Tag/tag";
 import Experience from "./components/Experience/experience";
 import Project from "./components/Project/project";
 import Certificate from "./components/Certificate/certificate";
+import Lenis from "@studio-freight/lenis";
 
 export default function HomePage() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.5,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
   return (
     <>
       {/* Header */}
@@ -150,16 +169,16 @@ export default function HomePage() {
       <footer className="flex flex-col justify-center items-center gap-1 mx-6 lg:mx-28 py-6 border-t border-primary">
         <div className="flex gap-1">
           <Link href="mailto:enokrosanti54@gmail.com?subject=Hello%20There&body=I%20would%20like%20to%20connect%20with%20you.">
-            <Image src="/icons/gmail.svg" alt="gmail-icon" width={24} height={24} />
+            <Image src="/assets/icons/gmail.svg" alt="gmail-icon" width={24} height={24} />
           </Link>
           <Link href={"https://www.instagram.com/e.rsnti__/"}>
-            <Image src="/icons/instagram-icon.svg" alt="instagram-icon" width={24} height={24} />
+            <Image src="/assets/icons/instagram-icon.svg" alt="instagram-icon" width={24} height={24} />
           </Link>
           <Link href={"https://github.com/enokrosanti"}>
-            <Image src="/icons/github-icon.svg" alt="github-icon" width={24} height={24} />
+            <Image src="/assets/icons/github-icon.svg" alt="github-icon" width={24} height={24} />
           </Link>
           <Link href={"https://www.linkedin.com/in/enok-rosanti/"}>
-            <Image src="/icons/linkedin-icon.svg" alt="linkedin-icon" width={24} height={24} />
+            <Image src="/assets/icons/linkedin-icon.svg" alt="linkedin-icon" width={24} height={24} />
           </Link>
         </div>
         <p className="text-white text-sm font-normal">© 2024 Enok Rosanti All rights reserved.</p>
