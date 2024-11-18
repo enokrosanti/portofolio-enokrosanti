@@ -1,11 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Certificate({ title, image, issuer, date, link }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
+
   return (
-    <div className="w-full flex flex-col justify-between gap-4 bg-gradient-to-r from-[#130428] via-[#251043] to-[#190634] p-4 rounded-lg border-t-2 border-[#693B93]">
+    <div data-aos="fade-up" className="w-full flex flex-col justify-between gap-4 bg-gradient-to-r from-[#130428] via-[#251043] to-[#190634] p-4 rounded-lg border-t-2 border-[#693B93]">
       <div className="rounded-lg border-2 border-primary p-1">
         <Image src={image} alt="certificate-image" width={400} height={200} className="object-cover rounded-md" />
       </div>

@@ -1,12 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Project({ projectName, projectImage, description, link }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
+
   return (
-    <div className="relative z-20 w-full mt-8 group hover:cursor-pointer">
+    <div data-aos="fade-up" className="relative z-20 w-full mt-8 group hover:cursor-pointer">
       <p className="font-semibold text-base text-[#9857D3]">Featured Project</p>
       <h4 className="font-semibold text-xl text-grey">{projectName}</h4>
       <div className="relative bg-custom-radial p-6 rounded-xl overflow-hidden mt-4">
