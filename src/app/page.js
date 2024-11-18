@@ -8,6 +8,8 @@ import Experience from "./components/Experience/experience";
 import Project from "./components/Project/project";
 import Certificate from "./components/Certificate/certificate";
 import Lenis from "@studio-freight/lenis";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function HomePage() {
   useEffect(() => {
@@ -35,6 +37,18 @@ export default function HomePage() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
+
   return (
     <>
       {/* Header */}
@@ -79,8 +93,10 @@ export default function HomePage() {
 
       {/* About Me */}
       <section id="about" className="px-6 py-24 lg:px-36 relative">
-        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">About Me</h2>
-        <div className="relative bg-custom-radial p-6 rounded-xl overflow-hidden">
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
+          About Me
+        </h2>
+        <div data-aos="fade-up" className="relative bg-custom-radial p-6 rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-custom-radial blur-lg rounded-xl -z-10"></div>
           <h4 className="font-preahvihear font-normal text-white text-xl mb-4">
             Im Enok Rosanti, as <span className="text-primary font-normal text-xl">Frontend Developer</span>
@@ -95,7 +111,9 @@ export default function HomePage() {
 
       {/* Experience */}
       <section id="experience" className="px-6 py-24 lg:px-36 relative z-30">
-        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">Experience</h2>
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
+          Experience
+        </h2>
         <div className="flex flex-wrap gap-4 justify-center">
           <Experience
             image={"/assets/images/experience/sawala-tech.png"}
@@ -120,7 +138,9 @@ export default function HomePage() {
 
       {/* Projects */}
       <section id="projects" className="px-6 py-24 lg:px-36 relative">
-        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">Projects</h2>
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
+          Projects
+        </h2>
         <div className="flex flex-col gap-6">
           <Project
             projectName={"Zenlytics - Personal Task"}
@@ -143,7 +163,9 @@ export default function HomePage() {
 
       {/* Certificates */}
       <section id="certificates" className="px-6 py-24 lg:px-36 relative">
-        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">Certificates</h2>
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
+          Certificates
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Certificate image={"/assets/images/certificates/nodejsmongodb-gamelab.png"} title={"NodeJS dan MongoDB"} issuer={"Gamelab Indonesia"} date={"September 2024"} link={"https://www.gamelab.id/certificate/GL3347427148"} />
           <Certificate
