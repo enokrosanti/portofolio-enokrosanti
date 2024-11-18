@@ -46,6 +46,22 @@ export default function HomePage() {
           </svg>
         </button>
       </section>
+
+      {/* About Me */}
+      <section id="about" className="px-6 py-24 lg:px-36 relative">
+        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">About Me</h2>
+        <div className="relative bg-custom-radial p-6 rounded-xl overflow-hidden">
+          <div className="absolute inset-0 bg-custom-radial blur-lg rounded-xl -z-10"></div>
+          <h4 className="font-preahvihear font-normal text-white text-xl mb-4">
+            Im Enok Rosanti, as <span className="text-primary font-normal text-xl">Frontend Developer</span>
+          </h4>
+          <p className="text-grey font-normal text-base">
+            I am a budding Frontend Developer with a fair amount of knowledge in this field. Although still in the early stages, I have already created some simple projects that help me understand and apply basic concepts such as HTML, CSS,
+            JavaScript, as well as modern frameworks such as Next.js and Tailwind CSS. I continue to learn and explore new technologies while honing my skills through practical projects. As an evolving developer, I am committed to
+            continuously improving my skills and am ready to take on bigger challenges in the future.
+          </p>
+        </div>
+      </section>
     </>
   );
 }
