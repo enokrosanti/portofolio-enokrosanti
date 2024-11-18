@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Tag from "./components/Tag/tag";
 import Experience from "./components/Experience/experience";
 import Project from "./components/Project/project";
@@ -144,6 +145,25 @@ export default function HomePage() {
           <Certificate image={"/assets/images/certificates/htmlcssjs-gamelab.png"} title={"HTML, CSS, dan JavaScript"} issuer={"Gamelab Indonesia"} date={"January 2024"} link={"https://www.gamelab.id/certificate/GL5572132962"} />
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="flex flex-col justify-center items-center gap-1 mx-6 lg:mx-28 py-6 border-t border-primary">
+        <div className="flex gap-1">
+          <Link href="mailto:enokrosanti54@gmail.com?subject=Hello%20There&body=I%20would%20like%20to%20connect%20with%20you.">
+            <Image src="/icons/gmail.svg" alt="gmail-icon" width={24} height={24} />
+          </Link>
+          <Link href={"https://www.instagram.com/e.rsnti__/"}>
+            <Image src="/icons/instagram-icon.svg" alt="instagram-icon" width={24} height={24} />
+          </Link>
+          <Link href={"https://github.com/enokrosanti"}>
+            <Image src="/icons/github-icon.svg" alt="github-icon" width={24} height={24} />
+          </Link>
+          <Link href={"https://www.linkedin.com/in/enok-rosanti/"}>
+            <Image src="/icons/linkedin-icon.svg" alt="linkedin-icon" width={24} height={24} />
+          </Link>
+        </div>
+        <p className="text-white text-sm font-normal">© 2024 Enok Rosanti All rights reserved.</p>
+      </footer>
     </>
   );
 }
