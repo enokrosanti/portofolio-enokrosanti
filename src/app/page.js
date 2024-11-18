@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Tag from "./components/Tag/tag";
+import Experience from "./components/Experience/experience";
 
 export default function HomePage() {
   return (
@@ -60,6 +61,33 @@ export default function HomePage() {
             JavaScript, as well as modern frameworks such as Next.js and Tailwind CSS. I continue to learn and explore new technologies while honing my skills through practical projects. As an evolving developer, I am committed to
             continuously improving my skills and am ready to take on bigger challenges in the future.
           </p>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="px-6 py-24 lg:px-36 relative z-30">
+        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
+          Experience
+        </h2>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Experience
+            image={"/assets/images/experience/sawala-tech.png"}
+            title={"PT. Sawala Inovasi Indonesia"}
+            jobTitle={"Frontend Web Developer - Internship"}
+            date={"July - November 2024"}
+            description={
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quis porro ducimus exercitationem minus praesentium, voluptate aperiam a dolores officiis necessitatibus consectetur quod facere nostrum vitae, aspernatur itaque possimus id cupiditate. Pariatur quod neque at molestias eligendi, repudiandae asperiores repellendus similique explicabo praesentium vel cum, placeat sunt, itaque eveniet! Delectus, cum dignissimos!"
+            }
+          />
+          <Experience
+            image={"/assets/images/experience/Esc.png"}
+            title={"ESC SMKN 1 Majalengka"}
+            jobTitle={"Lead of Documentation"}
+            date={"Jan 2024 - Now"}
+            description={
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quis porro ducimus exercitationem minus praesentium, voluptate aperiam a dolores officiis necessitatibus consectetur quod facere nostrum vitae, aspernatur itaque possimus id cupiditate. Pariatur quod neque at molestias eligendi, repudiandae asperiores repellendus similique explicabo praesentium vel cum, placeat sunt, itaque eveniet! Delectus, cum dignissimos!"
+            }
+          />
         </div>
       </section>
     </>
