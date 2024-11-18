@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Tag from "./components/Tag/tag";
 import Experience from "./components/Experience/experience";
+import Project from "./components/Project/project";
 
 export default function HomePage() {
   return (
@@ -66,7 +67,7 @@ export default function HomePage() {
 
       {/* Experience */}
       <section id="experience" className="px-6 py-24 lg:px-36 relative z-30">
-        <h2 data-aos="fade-up" className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
+        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
           Experience
         </h2>
         <div className="flex flex-wrap gap-4 justify-center">
@@ -87,6 +88,31 @@ export default function HomePage() {
             description={
               "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quis porro ducimus exercitationem minus praesentium, voluptate aperiam a dolores officiis necessitatibus consectetur quod facere nostrum vitae, aspernatur itaque possimus id cupiditate. Pariatur quod neque at molestias eligendi, repudiandae asperiores repellendus similique explicabo praesentium vel cum, placeat sunt, itaque eveniet! Delectus, cum dignissimos!"
             }
+          />
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="px-6 py-24 lg:px-36 relative">
+        <h2 className="font-preahvihear text-white font-normal text-4xl text-center mb-6">
+          Projects
+        </h2>
+        <div className="flex flex-col gap-6">
+          <Project
+            projectName={"Zenlytics - Personal Task"}
+            projectImage={"/assets/images/projects/zenlytics.png"}
+            description={
+              "This app lets users log in and manage tasks with a title, due date, description, and status. As a frontend developer, I designed a simple, responsive interface with an easy login page, task list, and forms for adding or editing tasks, ensuring smooth navigation and user experience."
+            }
+            link={"https://aplikasi-personal-task.vercel.app/"}
+          />
+          <Project
+            projectName={"Wander - Simple Travel Blog"}
+            projectImage={"/assets/images/projects/wander.png"}
+            description={
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis magnam voluptate, non error dolores facere iste aperiam numquam ducimus. Debitis ad ipsum suscipit deserunt esse sed voluptatum totam eveniet laudantium?"
+            }
+            link={"https://sawala-blog.vercel.app"}
           />
         </div>
       </section>
