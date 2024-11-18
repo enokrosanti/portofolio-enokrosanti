@@ -1,101 +1,51 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
+import Tag from "./components/Tag/tag";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <>
+      {/* Header */}
+      <section className="flex flex-col items-center gap-20 pt-24 pb-10 px-2 md:px-6 lg:px-36">
+        <header className="flex flex-col items-center gap-14">
+          <div className="flex flex-col items-center gap-14 sm:w-full md:w-[680px]">
+            <div className="relative cursor-pointer">
+              <Image src="/assets/images/user/user.jpg" alt="user" width={96} height={96} className="rounded-full object-cover aspect-square border-2 border-primary p-1" />
+              <Image src="/assets/icons/Code.png" alt="code" width={32} height={32} className="absolute top-[64px] left-[68px]" />
+            </div>
+            <div className="flex flex-col gap-5 sm:w-full md:w-[680px]">
+              <div className="flex flex-col gap-2">
+                <p className="text-xl font-normal text-white text-center w-full sm:w-[90%] md:w-[680px] font-preahvihear">
+                  Hello World! I&lsquo;m <span className="text-primary">Enok Rosanti</span> as
+                </p>
+                <h1 className="font-bold text-lightGrey text-center text-3xl sm:text-4xl md:text-5xl w-full sm:w-[90%] md:w-[680px] font-preahvihear">Frontend Developer</h1>
+              </div>
+              <p className="text-darkGrey font-normal text-sm text-center w-full sm:w-[90%] md:w-[680px] px-10">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ducimus nihil optio nisi, praesentium velit aliquid at repellendus, explicabo voluptatem illum adipisci delectus impedit?{" "}
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Tag link={"https://html.com/"} image={"/assets/images/tags/html.png"} tag={"HTML"} />
+            <Tag link={""} image={"/assets/images/tags/css.png"} tag={"CSS"} />
+            <Tag link={""} image={"/assets/images/tags/javascript.png"} tag={"JavaScript"} />
+            <Tag link={"https://react.dev/"} image={"/assets/images/tags/react.png"} tag={"React"} />
+            <Tag link={"https://nextjs.org/"} image={"/assets/images/tags/nextjs.webp"} tag={"NextJS"} />
+            <Tag link={"https://tailwindcss.com/"} image={"/assets/images/tags/tailwindcss.png"} tag={"Tailwind CSS"} />
+            <Tag link={"https://nodejs.org/en"} image={"/assets/images/tags/nodejs.png"} tag={"NodeJS"} />
+          </div>
+        </header>
+        <button className="hidden lg:block">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M27.0612 15.9386C27.201 16.078 27.312 16.2436 27.3877 16.4259C27.4634 16.6082 27.5024 16.8037 27.5024 17.0011C27.5024 17.1986 27.4634 17.394 27.3877 17.5764C27.312 17.7587 27.201 17.9243 27.0612 18.0636L17.0612 28.0636C16.9218 28.2035 16.7563 28.3144 16.5739 28.3901C16.3916 28.4658 16.1961 28.5048 15.9987 28.5048C15.8013 28.5048 15.6058 28.4658 15.4235 28.3901C15.2411 28.3144 15.0756 28.2035 14.9362 28.0636L4.9362 18.0636C4.79667 17.9241 4.68599 17.7585 4.61047 17.5762C4.53496 17.3939 4.49609 17.1985 4.49609 17.0011C4.49609 16.8038 4.53496 16.6084 4.61047 16.4261C4.68599 16.2438 4.79667 16.0782 4.9362 15.9386C5.07573 15.7991 5.24137 15.6884 5.42367 15.6129C5.60598 15.5374 5.80137 15.4985 5.9987 15.4985C6.19602 15.4985 6.39141 15.5374 6.57372 15.6129C6.75602 15.6884 6.92167 15.7991 7.0612 15.9386L15.9999 24.8749L24.9387 15.9349C25.0782 15.7957 25.2439 15.6853 25.4261 15.6102C25.6083 15.535 25.8036 15.4965 26.0007 15.4968C26.1978 15.4972 26.393 15.5364 26.5749 15.6122C26.7569 15.688 26.9221 15.7989 27.0612 15.9386ZM14.9362 18.0636C15.0756 18.2035 15.2411 18.3144 15.4235 18.3901C15.6058 18.4658 15.8013 18.5048 15.9987 18.5048C16.1961 18.5048 16.3916 18.4658 16.5739 18.3901C16.7563 18.3144 16.9218 18.2035 17.0612 18.0636L27.0612 8.06364C27.2007 7.92411 27.3114 7.75846 27.3869 7.57616C27.4624 7.39385 27.5013 7.19846 27.5013 7.00114C27.5013 6.80381 27.4624 6.60842 27.3869 6.42612C27.3114 6.24381 27.2007 6.07817 27.0612 5.93864C26.9217 5.79911 26.756 5.68843 26.5737 5.61291C26.3914 5.5374 26.196 5.49854 25.9987 5.49854C25.8014 5.49854 25.606 5.5374 25.4237 5.61291C25.2414 5.68843 25.0757 5.79911 24.9362 5.93864L15.9999 14.8749L7.0612 5.93864C6.7794 5.65684 6.39721 5.49854 5.9987 5.49854C5.60018 5.49854 5.21799 5.65684 4.9362 5.93864C4.6544 6.22043 4.49609 6.60262 4.49609 7.00114C4.49609 7.39965 4.6544 7.78184 4.9362 8.06364L14.9362 18.0636Z"
+              fill="#878EA1"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          </svg>
+        </button>
+      </section>
+    </>
   );
 }
