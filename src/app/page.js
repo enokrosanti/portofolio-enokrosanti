@@ -194,6 +194,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Contact me */}
+      <section id="contact" className="px-6 py-24 lg:px-36 relative">
+        <h2 data-aos="fade-up" className="font-preahvihear font-normal text-white text-4xl text-center mb-6">
+          Contact Me
+        </h2>
+        <form data-aos="fade-up" className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="w-full">
+              <label htmlFor="name" className="text-white font-medium text-lg">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your name"
+                required
+                className="w-full h-[50px] mt-2 flex flex-col gap-4 bg-gradient-to-r from-[#130428] via-[#251043] to-[#190634] p-4 rounded-lg border-t-2 border-[#693B93] outline-none text-base text-white font-normal"
+              />
+            </div>
+            <div className="w-full">
+              <label htmlFor="name" className="text-white font-medium text-lg">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="name"
+                placeholder="example@gmail.com"
+                required
+                className="w-full h-[50px] mt-2 flex flex-col gap-4 bg-gradient-to-r from-[#130428] via-[#251043] to-[#190634] p-4 rounded-lg border-t-2 border-[#693B93] outline-none text-base text-white font-normal"
+              />
+            </div>
+          </div>
+          <div className="w-full">
+            <label htmlFor="message" className="text-white font-medium text-lg">
+              Message
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+              required
+              className="w-full h-[170px] mt-2 flex flex-col gap-4 bg-gradient-to-r from-[#130428] via-[#251043] to-[#190634] p-4 rounded-lg border-t-2 border-[#693B93] outline-none text-base text-white font-normal"
+            ></textarea>
+          </div>
+          <button className="w-[100px] h-[33px] flex items-center justify-center text-white font-medium text-sm text-center bg-[#2C1250] py-3 rounded-lg border border-[#693B93]">Send</button>
+        </form>
+      </section>
+
       {/* Footer */}
       <footer className="flex flex-col justify-center items-center gap-1 mx-6 lg:mx-28 py-6 border-t border-primary">
         <div className="flex gap-1">
